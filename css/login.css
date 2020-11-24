@@ -1,0 +1,74 @@
+main {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+form {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+.form_body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+h2 {
+    text-transform: uppercase;
+}
+
+label {
+    vertical-align: middle;
+    margin: 20px 0;
+}
+
+input[type="submit"] {
+    text-transform: uppercase;
+}
+
+input[type="submit"], input[type="button"], input[type="reset"] {
+    margin: 10px;
+    cursor: pointer;
+}
+
+input,input[type="submit"], input[type="button"], button {
+    vertical-align: middle;
+    background: black;
+    border: 2px solid var(--white);
+    color: var(--white);
+}
+
+.buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+button {
+    margin-top: 60px;
+    font-size: 0.8em;
+    cursor: pointer;
+}
+
+form[name="login_form"] {
+/*    display: none;*/
+}
+
+button[name="to_register"] {
+/*    display: none;*/
+}
+
+form[name="register_form"] {
+    display: none;
+}
+
+button[name="to_login"] {
+    display: none;
+}

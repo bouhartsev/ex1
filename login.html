@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>HappyDino</title>
+    <title>HappyDino - login</title>
     
     <link rel="shortcut icon" href="./img/logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/snow.css">
-    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/login.css">
+    <script src="js/login.js" type="text/javascript"></script>
 </head>
 <body>
     <div class="snow"></div>
@@ -23,21 +24,53 @@
         </ul>
     </header>
     <main>
-        <form>
-            <h2>Login</h2>
+        <form name="login_form" id="login_form">
+            <h2>Вход</h2>
             <div class="form_body">
-                <label for="login">Login
-                    <input type="email" name="login">
+                <label for="login">Логин
+                    <input type="email" name="login" placeholder="mail@example.com" required>
                 </label>
-                <label for="password">Password
-                    <input type="password" name="password">
+                <label for="password">Пароль
+                    <input type="password" name="password" required>
                 </label>
-                <input type="submit">
+                <div class="buttons">
+                    <input type="submit" value="ВОЙТИ" form="login">
+                    <input type="button" value="Восстановить пароль">
+                </div>
             </div>
         </form>
+        <button name="to_register" onclick="change()" id="to_register">К регистрации</button>
+        <form name="register_form" id="register_form">
+            <h2>Регистрация</h2>
+            <div class="form_body">
+                <label for="login">Логин
+                    <input type="email" name="login" placeholder="mail@example.com" required>
+                </label>
+                <label for="password">Пароль
+                    <input type="password" name="password" required>
+                </label>
+                <label for="password2">Пароль ешё раз
+                    <input type="password" name="password2" required>
+                </label>
+                <label for="nik">Ник
+                    <input type="text" name="nik" required>
+                </label>
+                <label for="status">Статус
+                    <input type="text" name="status">
+                </label>
+                <label for="ava">Аватарка
+                    <input type="file" name="ava">
+                </label>
+                <div class="buttons">
+                    <input type="submit" value="Регистрация" form="register">
+                    <input type="reset" value="Сброс" form="register">
+                </div>
+            </div>
+        </form>
+        <button name="to_login" onclick="change()" id="to_login">Ко входу</button>
     </main>
     <footer>
-       <p>© 2020 <a href="https://bouhartsev.site/" class="link" target="_blank">Matvey Bouhartsev</a></p>
+       <p><a href="/" target="_parent">HappyDino</a> © 2020 <a href="https://bouhartsev.site/" class="link" target="_blank">Matvey Bouhartsev</a></p>
     </footer>
 </body>
 </html>
