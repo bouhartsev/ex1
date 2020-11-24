@@ -200,12 +200,18 @@ main>div>.text {
 }
 
 #gallery>.row {
-    margin: 10px 0;
+    margin: 20px 0;
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+}
+
+#gallery img {
+    width: 40%;
+    border: 5px solid var(--white);
+    box-shadow: 10px 10px 10px var(--gray);
 }
 
 #download {
