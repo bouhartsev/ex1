@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+:root {
+    --white: whitesmoke;
+/*    --green: lawngreen;*/
+    --green: rgb(0, 255, 0);
+    --gray: rgba(200, 200, 200, 0.6);
+}
+
+html {
+    font-family: 'Oswald', sans-serif;
+}
+
+body {
+    color: var(--white);
+    background: black;
+/*    background: gray;*/
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    
+    font-size: 30px;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+}
+
+h1 {
+    position: relative;
+    transition: all 0.2s ease-in-out;
+}
+
+h1:hover {
+    color: var(--green);
+}
+
+h1::before {
+    display: block;
+    position: absolute;
+    top:-10%;
+    left:-10%;
+    width: 120%;
+    height: 120%;
+    content: "";
+    border: 1px solid black;
+    background-color: var(--gray);
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+h1:hover::before {
+    opacity: 1;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+    width: 30%;
+    font-size: 1.1em;
+    backface-visibility: hidden;
+    
+}
+
+li {
+    list-style-type: none;
+    vertical-align: middle;
+}
+
+a {
+    will-change: transform;
+    color: inherit;
+    text-decoration: none;
+}
+
+.link {
+    z-index: 1;
+    will-change: transform, color;
+    backface-visibility: hidden;
+    -webkit-font-smoothing: subpixel-antialiased;
+    transition: all 0.1s ease-in-out;
+}
+
+.link:hover {
+    color: var(--green);
+}
+
+.link::after {
+    display: block;
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0.05em;
+    left: 50%;
+    bottom: 0;
+    background: var(--green);
+    transition: width 0.2s ease-in-out;
+}
+
+.link::before {
+    display: block;
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0.05em;
+    left: 50%;
+    bottom: 0;
+    background: var(--green);
+    transition: width 0.2s ease-in-out, left 0.2s ease-in-out;
+}
+
+.link:hover::before {
+    width: 50%;
+    left: 0;
+}
+
+.link:hover::after {
+    width: 50%;
+}
