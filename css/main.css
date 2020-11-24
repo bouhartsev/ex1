@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+:root {
+    --white: whitesmoke;
+/*    --green: lawngreen;*/
+    --green: rgb(0, 255, 0);
+    --gray: rgba(200, 200, 200, 0.6);
+}
+
+html {
+    font-family: 'Oswald', sans-serif;
+}
+
+body {
+    color: var(--white);
+    background-color: rgba(50,50,50);
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    
+    font-size: 30px;
+    position: relative;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+}
+
+h1 {
+    position: relative;
+    transition: color 1s ease-in-out;
+}
+
+h1:hover {
+    color: var(--green);
+}
+
+/*
+h1::before {
+    display: block;
+    position: absolute;
+    top:-10%;
+    left:-10%;
+    width: 120%;
+    height: 120%;
+    content: "";
+    border: 1px solid black;
+    background-color: var(--gray);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+h1:hover::before {
+    opacity: 1;
+}
+*/
+
+header>ul {
+    padding: 0;
+    margin: 0;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+    width: 30%;
+    font-size: 1.1em;
+    backface-visibility: hidden;
+    
+}
+
+li {
+    list-style-type: none;
+    vertical-align: middle;
+}
+
+a {
+    will-change: transform;
+    color: inherit;
+    text-decoration: none;
+}
+
+.link {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    will-change: transform, color;
+    backface-visibility: hidden;
+    -webkit-font-smoothing: subpixel-antialiased;
+    transition: all 0.1s ease-in-out;
+}
+
+.link:hover {
+    color: var(--green);
+}
+
+.link::after {
+    display: block;
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0.05em;
+    left: 50%;
+    bottom: 0;
+    background: var(--green);
+    transition: width 0.2s ease-in-out;
+}
+
+.link::before {
+    display: block;
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0.05em;
+    left: 50%;
+    bottom: 0;
+    background: var(--green);
+    transition: width 0.2s ease-in-out, left 0.2s ease-in-out;
+}
+
+.link:hover::before {
+    width: 50%;
+    left: 0;
+}
+
+.link:hover::after {
+    width: 50%;
+}
+
+main>div {
+    margin: 30px 0;
+}
+
+main>div>.text {
+    width: 40%;
+    margin: 0 2%;
+    font-weight: 300;
+}
+
+#about {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+}
+
+#about p {
+    text-indent: 2%;
+}
+
+#about ul {
+    padding-left: 2%;
+}
+
+#about>.image {
+    width: 30%;
+}
+
+#about img {
+    width: 100%;
+}
+
+#video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#rules {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#rules .text {
+    width: 50%;
+    text-align: center;
+}
+
+#gallery {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#gallery>.row {
+    margin: 10px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#download {
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+}
+
+#download a {
+    background: rgba(0,0,0,0.2);
+    padding: 0.5em 1em;
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
