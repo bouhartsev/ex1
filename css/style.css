@@ -89,6 +89,8 @@ a {
 }
 
 .link {
+    display: inline-block;
+    position: relative;
     z-index: 1;
     will-change: transform, color;
     backface-visibility: hidden;
@@ -182,3 +184,21 @@ main>div>.text {
     width: 50%;
     text-align: center;
 }
+
+#gallery {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+#gallery>.row {
+    margin: 10px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
